@@ -378,14 +378,17 @@ function getPolls() {
 </section>
 
 <section markdown="block">
-### Here's We Actually Run an Update
+### Actually Run an Update on Mongo
 
 {% highlight bash %}
-db.polls.update({"_id":ObjectId("53a13140ecffedecb5f18ca0"), "choices": {$elemMatch:{"name":"Chocolate"}}}, {$set: {"choices.$.votes": 1}})
+db.polls.update({"_id":ObjectId("53a13140ecffedecb5f18ca0"), 
+	"choices": {$elemMatch:{"name":"Chocolate"}}}, {$set: {"choices.$.votes": 1}})
 
-db.polls.update({"_id":ObjectId("53a13140ecffedecb5f18ca0"), "choices": {$elemMatch:{"name":"Chocolate"}}}, {$inc: {"choices.$.votes": 1}})
+db.polls.update({"_id":ObjectId("53a13140ecffedecb5f18ca0"), 
+	"choices": {$elemMatch:{"name":"Chocolate"}}}, {$inc: {"choices.$.votes": 1}})
 
-db.polls.update({"_id":ObjectId("53a13140ecffedecb5f18ca0"), "choices": {$elemMatch:{"name":"Chocolate"}}}, {$inc: {"choices.$.votes": 1}})
+db.polls.update({"_id":ObjectId("53a13140ecffedecb5f18ca0"), 
+	"choices": {$elemMatch:{"name":"Chocolate"}}}, {$inc: {"choices.$.votes": 1}})
 {% endhighlight %}
 </section>
 
@@ -398,7 +401,9 @@ router.post('/poll/vote', function(req, res) {
     var collection = db.get('polls');
     console.log(req.body.id);
     console.log(req.body.name);
-    collection.findAndModify({"_id":req.body.id, "choices": {$elemMatch:{"name":req.body.name}}}, {$inc: {"choices.$.votes": 1}}, function(e, docs) {
+    collection.findAndModify({"_id":req.body.id, "choices": 
+		{$elemMatch:{"name":req.body.name}}}, 
+		{$inc: {"choices.$.votes": 1}}, function(e, docs) {
         res.json({'Error':e});
     });
 });
