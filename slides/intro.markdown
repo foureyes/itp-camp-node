@@ -21,6 +21,17 @@ title: Nodex, Express and Mongo
 </section>
 
 <section markdown="block">
+### Node?
+
+* js server side framework based on rhino
+* [event loop](http://www.stephanimoroni.com/wp-content/uploads/2014/03/node-event-loop.png)
+* for web stuff...
+	* good for soft real time apps
+	* creating apis
+* (but more than just for web)
+</section>
+
+<section markdown="block">
 ### npm
 
 * like other package managers  &rarr;
