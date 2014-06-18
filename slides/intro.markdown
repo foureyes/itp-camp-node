@@ -55,6 +55,8 @@ title: Nodex, Express and Mongo
 	* good for soft real time apps
 	* creating apis
 * (but more than just for web)
+* sync vs async
+* state of frameworks (sails, meteor, socket.io)
 </section>
 
 <section markdown="block">
