@@ -1,0 +1,14 @@
+
+extends layout
+
+block content
+  p #{poll.question}
+  form#formVote(name="vote",method="post",action="/vote")
+  ul
+    each choice, votes in poll.choices
+      li #{choice.name} #{choice.votes}
+
+    h1= title
+        input#inputUserName(type="text", placeholder="username", name="username")
+        input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+        button#btnSubmit(type="submit") submit
