@@ -3,3 +3,4 @@ npm-debug.log
 _site
 data
 _data
+.DS_Store
