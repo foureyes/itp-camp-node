@@ -22,8 +22,6 @@ function getPolls() {
 };
 
 function vote(id, choice) {
-	alert(id);
-	alert(choice);
     $.ajax({
         type: 'POST',
         data: {'id':id, 'name':choice},

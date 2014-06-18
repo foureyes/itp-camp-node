@@ -1,0 +1,9 @@
+base_url: 
+domain: 
+res_base_url: resources
+pygments: true
+markdown: kramdown
+kramdown:
+  entity_output: numeric
+
+
