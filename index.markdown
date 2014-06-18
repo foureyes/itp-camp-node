@@ -3,7 +3,6 @@ layout: default
 title: Node, Express and MongoDB
 ---
 
-# Node, Express and MongoDB
 
 (a quick experiment)
 
